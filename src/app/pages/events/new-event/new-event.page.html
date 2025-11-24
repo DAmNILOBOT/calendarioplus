@@ -1,0 +1,38 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/events"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Novo evento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-list>
+    <ion-item lines="full">
+      <ion-label position="stacked">Título *</ion-label>
+      <ion-input [(ngModel)]="title" placeholder="Ex: Dentista"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="stacked">Data *</ion-label>
+      <ion-datetime presentation="date" [(ngModel)]="date"></ion-datetime>
+      <!-- usa yyyy-mm-dd; ion-datetime retorna valor ISO -->
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="stacked">Horário</ion-label>
+      <ion-input type="time" [(ngModel)]="time"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">Anotações</ion-label>
+      <ion-textarea [(ngModel)]="notes" placeholder="Observações..."></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <div style="padding: 16px;">
+    <ion-button expand="block" color="medium" (click)="cancel()">Cancelar</ion-button>
+    <ion-button expand="block" color="primary" (click)="saveEvent()">Salvar</ion-button>
+  </div>
+</ion-content>

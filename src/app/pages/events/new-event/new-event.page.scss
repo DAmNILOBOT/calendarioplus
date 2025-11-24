@@ -1,0 +1,31 @@
+.form-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+ion-item {
+  border-radius: 14px;
+  background: #ffffff;
+  --inner-padding-end: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+
+ion-label {
+  font-weight: 600;
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+ion-button {
+  height: 48px;
+  font-size: 1.05rem;
+  border-radius: 12px;
+}

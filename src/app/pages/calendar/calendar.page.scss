@@ -1,0 +1,77 @@
+.calendar-content {
+  padding: 16px;
+  background: #f7fbfb;
+  min-height: 100%;
+}
+
+/* topo: calendário card */
+.calendar-top {
+  margin-bottom: 14px;
+}
+.calendar-card {
+  background: linear-gradient(180deg,#ffffff,#fbfcff);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+/* estilo do ion-datetime grande e centralizado */
+.datetime {
+  --padding-start: 12px;
+  --padding-end: 12px;
+  width: 100%;
+  --border-radius: 12px;
+}
+
+/* infos selecionadas */
+.selected-info h3 {
+  margin: 12px 0 6px;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.selected-info .hint {
+  margin: 0 0 10px;
+  color: #6b6b6b;
+  font-size: 0.9rem;
+}
+
+/* lista de eventos */
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.event-card {
+  border-radius: 14px;
+  overflow: hidden;
+}
+.event-avatar {
+  background: rgba(90,46,220,0.12);
+  color: #5a2edc;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* empty state */
+.empty {
+  text-align: center;
+  padding: 26px 16px;
+  color: #777;
+}
+.empty-illustration {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  opacity: 0.95;
+}
+
+/* FAB estilo */
+.fab-new ion-fab-button {
+  --background: linear-gradient(180deg,#5a2edc,#4a18d5);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(74,24,213,0.22);
+}

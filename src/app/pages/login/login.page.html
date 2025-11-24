@@ -1,0 +1,40 @@
+<ion-content class="login-content" fullscreen>
+  <div class="top-decor"></div>
+
+  <div class="container">
+
+    <div class="header-img">
+  <img src="assets/img/wireframe.jpg" alt="Calendário ilustração">
+</div>
+
+
+    <h1 class="title">Bem-vindo de volta</h1>
+
+    <div class="form-box">
+      <ion-input
+        type="email"
+        placeholder="Digite seu e-mail"
+        [(ngModel)]="email"
+        class="input-field">
+      </ion-input>
+
+      <ion-input
+        type="password"
+        placeholder="Digite a senha"
+        [(ngModel)]="password"
+        class="input-field">
+      </ion-input>
+
+      <a class="forgot" (click)="forgotPassword()">Esqueceu a senha ?</a>
+
+      <ion-button expand="block" class="login-btn" (click)="login()">Login</ion-button>
+    </div>
+
+    <p class="bottom-text">
+      Não tem uma conta?
+      <a (click)="goRegister()">Cadastre-se</a>
+    </p>
+  </div>
+
+  <div class="corner-decor"></div>
+</ion-content>

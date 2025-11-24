@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title>
+      Seja Bem-Vindo!
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- CALENDÁRIO -->
+  <div class="calendar-container">
+    <ion-datetime
+      presentation="date"
+      [value]="today.toISOString()"
+    ></ion-datetime>
+  </div>
+
+  <!-- SEÇÃO DE EVENTOS -->
+  <div class="section-title">
+    <h2>Seus eventos</h2>
+  </div>
+
+  <div class="events-list">
+    <ion-card *ngFor="let ev of events" class="event-card">
+      <ion-card-header>
+        <ion-card-title>{{ ev.title }}</ion-card-title>
+        <ion-card-subtitle>{{ ev.date }}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+  <!-- BOTÃO FLUTUANTE -->
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="openNewEvent()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+<!-- MENU INFERIOR -->
+<ion-footer>
+  <ion-toolbar>
+    <div class="bottom-menu" style="display: flex; justify-content: space-around; padding: 10px; font-size: 24px;">
+      <ion-icon name="home-outline" (click)="goTo('home')" color="primary"></ion-icon>
+      <ion-icon name="calendar-outline" (click)="goTo('calendar')" color="medium"></ion-icon>
+      <ion-icon name="notifications-outline" (click)="goTo('events')" color="medium"></ion-icon>
+      <ion-icon name="person-outline" (click)="goTo('profile')" color="medium"></ion-icon>
+    </div>
+  </ion-toolbar>
+</ion-footer>

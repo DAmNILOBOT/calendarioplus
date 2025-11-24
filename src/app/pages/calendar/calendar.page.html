@@ -1,0 +1,62 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Calendário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="calendar-content" fullscreen>
+
+  <div class="calendar-top">
+    <div class="calendar-card">
+      <!-- visual simples do calendário: ion-datetime (apresentação de data) -->
+      <ion-datetime
+        presentation="date"
+        [value]="selectedDate"
+        (ionChange)="onDateChange($event)"
+        class="datetime"
+      ></ion-datetime>
+    </div>
+  </div>
+
+  <div class="selected-info">
+    <h3>Eventos em {{ (selectedDate | date:'fullDate') }}</h3>
+    <p class="hint">Toque em um evento para ver opções.</p>
+  </div>
+
+  <div class="events-list">
+    <ng-container *ngIf="eventsForSelected.length > 0; else emptyState">
+      <ion-card *ngFor="let ev of eventsForSelected" class="event-card" (click)="viewEvent(ev)">
+        <ion-item lines="none">
+          <ion-avatar slot="start" class="event-avatar">
+            <ion-icon name="calendar-outline"></ion-icon>
+          </ion-avatar>
+          <ion-label>
+            <h2 class="ev-title">{{ ev.title }}</h2>
+            <p class="ev-time">{{ ev.time }}</p>
+          </ion-label>
+          <ion-button fill="clear" slot="end" (click)="viewEvent(ev); $event.stopPropagation()">
+            <ion-icon slot="icon-only" name="ellipsis-vertical"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-card>
+    </ng-container>
+
+    <ng-template #emptyState>
+      <div class="empty">
+        <img src="/mnt/data/Wireframe A.jpg" alt="ilustração" class="empty-illustration" />
+        <p>Sem eventos neste dia. Toque no + para criar um.</p>
+      </div>
+    </ng-template>
+  </div>
+
+  <!-- FAB para criar evento -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="fab-new">
+    <ion-fab-button (click)="router.navigateByUrl('/events/new')">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <div class="profile-header">
+    <img [src]="user.photo" class="profile-img" />
+    <h2>{{ user.name }}</h2>
+    <p>{{ user.email }}</p>
+  </div>
+
+  <div class="profile-card">
+    <ion-button expand="block" color="primary" (click)="editProfile()">
+      Editar informações
+    </ion-button>
+
+    <ion-button expand="block" color="secondary" (click)="changePassword()">
+      Alterar senha
+    </ion-button>
+
+    <ion-button expand="block" color="danger" (click)="logout()">
+      Sair da conta
+    </ion-button>
+  </div>
+
+</ion-content>
+
+<!-- MENU INFERIOR -->
+<ion-footer>
+  <div class="bottom-menu">
+    <ion-icon name="home-outline" (click)="router.navigateByUrl('/home')"></ion-icon>
+    <ion-icon name="calendar-outline" (click)="router.navigateByUrl('/calendar')"></ion-icon>
+    <ion-icon name="notifications-outline" (click)="router.navigateByUrl('/events')"></ion-icon>
+    <ion-icon name="person" style="color:#4c8dff;"></ion-icon>
+  </div>
+</ion-footer>

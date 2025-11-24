@@ -1,0 +1,130 @@
+:host {
+  --ion-background-color: #eef4f3;
+}
+
+.login-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* decoração top-right igual ao tema */
+.top-decor {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ff7ab6 0%, #2b1b6b 100%);
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+  border-radius: 8px;
+  opacity: 0.95;
+}
+
+/* container central */
+.container {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+/* imagem topo */
+.header-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.header-img img {
+  width: 160px;
+  height: auto;
+  display: block;
+}
+
+
+/* título */
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 6px 0 18px;
+  color: #111;
+}
+
+/* formulario */
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+/* inputs arredondados */
+.input-field {
+  --background: #fff;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --border-radius: 50px;
+  height: 48px;
+  font-size: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+/* link esqueceu */
+.forgot {
+  text-align: right;
+  display: block;
+  color: #7ac5c1;
+  font-size: 13px;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+/* botão de login */
+.login-btn {
+  --background: linear-gradient(180deg,#5a2edc,#4a18d5);
+  --border-radius: 12px;
+  --box-shadow: 0 6px 16px rgba(90,46,220,0.22);
+  height: 48px;
+  font-weight: 600;
+  font-size: 17px;
+  margin-top: 2px;
+}
+
+/* texto inferior */
+.bottom-text {
+  margin-top: 14px;
+  font-size: 14px;
+  color: #444;
+}
+.bottom-text a {
+  color: #5a2edc;
+  font-weight: 700;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+/* decoração inferior direita */
+.corner-decor {
+  position: absolute;
+  right: 8px;
+  bottom: 10px;
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg,#2b1b6b 0%, #ff7ab6 100%);
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+  border-radius: 10px;
+  opacity: 0.95;
+  transform: rotate(10deg);
+}
+
+/* responsivo */
+@media (max-width: 420px) {
+  .illustration img { width: 120px; height: 120px; }
+  .title { font-size: 20px; }
+}

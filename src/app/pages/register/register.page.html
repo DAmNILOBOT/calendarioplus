@@ -1,0 +1,50 @@
+<ion-content class="register-content" fullscreen>
+
+  <!-- Ícone igual ao estilo do wireframe -->
+  <div class="icon-area">
+    <ion-icon name="calendar-clear-outline"></ion-icon>
+  </div>
+
+  <h1 class="title">Bem-vindo ao Calendário<span class="plus">+</span></h1>
+
+  <div class="form-box">
+
+    <ion-input
+      type="text"
+      placeholder="Nome Completo"
+      [(ngModel)]="name"
+      class="input-field">
+    </ion-input>
+
+    <ion-input
+      type="email"
+      placeholder="E-mail"
+      [(ngModel)]="email"
+      class="input-field">
+    </ion-input>
+
+    <ion-input
+      type="password"
+      placeholder="Senha"
+      [(ngModel)]="password"
+      class="input-field">
+    </ion-input>
+
+    <ion-input
+      type="password"
+      placeholder="Confirme a senha"
+      [(ngModel)]="confirm"
+      class="input-field">
+    </ion-input>
+
+    <ion-button expand="block" class="register-btn" (click)="register()">
+      Cadastrar-se
+    </ion-button>
+  </div>
+
+  <p class="bottom-text">
+    Já tem uma conta?
+    <a (click)="goLogin()">Entrar</a>
+  </p>
+
+</ion-content>

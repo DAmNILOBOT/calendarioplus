@@ -1,0 +1,76 @@
+:host {
+  --ion-background-color: #eef4f3;
+}
+
+.register-content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Ícone grande no topo */
+.icon-area {
+  margin-top: 32px;
+  margin-bottom: 10px;
+}
+ion-icon {
+  font-size: 70px;
+  color: #000;
+}
+
+/* Título */
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000;
+}
+.plus {
+  color: #5a2edc;
+  margin-left: 2px;
+}
+
+/* Caixa do formulário */
+.form-box {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Inputs estilo wireframe */
+.input-field {
+  --background: #ffffff;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --border-radius: 50px;
+  --box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  height: 48px;
+  font-size: 15px;
+}
+
+/* Botão roxo grande */
+.register-btn {
+  margin-top: 8px;
+  --background: #5a2edc;
+  --border-radius: 12px;
+  --box-shadow: 0px 6px 16px rgba(90, 46, 220, 0.25);
+  height: 48px;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+/* Texto inferior */
+.bottom-text {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #444;
+}
+.bottom-text a {
+  color: #5a2edc;
+  font-weight: 600;
+  margin-left: 4px;
+}
